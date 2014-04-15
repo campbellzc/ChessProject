@@ -15,6 +15,23 @@ public class Peice {
 		
 	}
 
+<<<<<<< HEAD
+=======
+	public void Act() {
+
+	}
+
+	public void move() {
+		
+	}
+
+	public ArrayList<Actor> processActors() {
+		
+	}
+
+
+	// private Image image;
+>>>>>>> 86dce120135e83eda12637e84f3962decf5e7268
 
 	
 
