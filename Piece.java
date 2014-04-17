@@ -7,7 +7,7 @@ import java.io.IOException;
 
 import javax.imageio.ImageIO;
 
-public class Peice {
+public class Piece {
 	private Image image;
 	public void act() {
 		if (getBoard() == null)
