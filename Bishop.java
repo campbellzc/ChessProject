@@ -1,4 +1,4 @@
-public class Bishop {
+public class Bishop extends Piece {
 	
 	Color color;
 	Image white;
@@ -6,22 +6,18 @@ public class Bishop {
 
 	public Bishop(Color color) {
 		this.color = color;
-
+		this.white = Bishop.loadImage("bishop_white");
+		this.black = Bishop.loadImage("bishop_black");
 
 	}
 
-	private static Image loadImage(String name) {
-		String path = null;
-		Image image = null;
-
-		try {
-			path = "cards" + File.separator + name + ".png";
-			image = ImageIO.read(new File(path));
-		} catch(IOException e) {
-			System.out.println("Could not load image at path: " + path);
-			System.exit(1);
+	public void draw(Graphics g, Rectangel r) {
+		if(this.color == BLACK) {
+			g.drawImage(black, r.x, r.y, r.width, r.height, null);
 		}
-
-		return image;
+		else {
+			g.drawImage(white, r.x, r.y, r.width, r.height, null);
+		}
 	}
+
 }
