@@ -1,13 +1,13 @@
 public class Castle {
 	
-	Color color;
-	Image white;
-	Image black;
+	private Color color;
+	private Image white;
+	private Image black;
 
 	public Castle(Color color) {
 		this.color = color;
-		this.white = Bishop.loadImage("rook_white");
-		this.black = Bishop.loadImage("rook_black");
+		this.white = Castle.loadImage("rook_white");
+		this.black = Castle.loadImage("rook_black");
 
 	}
 
