@@ -1,8 +1,8 @@
 public class Castle {
 	
-	Color color;
-	Image white;
-	Image black;
+	private Color color;
+	private Image white;
+	private Image black;
 
 	public Castle(Color color) {
 		this.color = color;

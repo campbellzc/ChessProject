@@ -1,6 +1,6 @@
 public class Bishop extends Piece {
 	
-	
+	private Color color;
 	private Image white;
 	private Image black;
 
