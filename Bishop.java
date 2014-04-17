@@ -1,8 +1,8 @@
 public class Bishop extends Piece {
 	
-	Color color;
-	Image white;
-	Image black;
+	
+	private Image white;
+	private Image black;
 
 	public Bishop(Color color) {
 		this.color = color;
