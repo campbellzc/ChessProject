@@ -14,12 +14,12 @@ public class Peice {
 			return;
 		
 	}
+
 <<<<<<< HEAD
+=======
 	public void Act() {
 
 	}
-=======
->>>>>>> 6d718c85ceada3c86fb90e1641f0545c3162e1b3
 
 	public void move() {
 		
@@ -28,12 +28,13 @@ public class Peice {
 	public ArrayList<Actor> processActors() {
 		
 	}
-<<<<<<< HEAD
 
 
 	// private Image image;
-=======
->>>>>>> 6d718c85ceada3c86fb90e1641f0545c3162e1b3
+>>>>>>> 86dce120135e83eda12637e84f3962decf5e7268
+
+	
+
 	private static Image loadImage(String name) {
 		String path = null;
 		Image image = null;
