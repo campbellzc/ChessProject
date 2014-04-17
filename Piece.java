@@ -22,6 +22,7 @@ public class Piece {
 	public ArrayList<Actor> processActors() {
 		
 	}
+
 	private static Image loadImage(String name) {
 		String path = null;
 		Image image = null;
