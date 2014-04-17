@@ -15,6 +15,11 @@ public class Piece {
 		
 	}
 
+	public void Act() {
+
+	}
+
+
 	public void move() {
 		
 	}
@@ -22,6 +27,13 @@ public class Piece {
 	public ArrayList<Actor> processActors() {
 		
 	}
+
+
+
+
+	// private Image image;
+
+
 
 	private static Image loadImage(String name) {
 		String path = null;
