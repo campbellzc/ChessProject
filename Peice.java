@@ -14,9 +14,6 @@ public class Peice {
 			return;
 		
 	}
-
-<<<<<<< HEAD
-=======
 	public void Act() {
 
 	}
@@ -31,10 +28,6 @@ public class Peice {
 
 
 	// private Image image;
->>>>>>> 86dce120135e83eda12637e84f3962decf5e7268
-
-	
-
 	private static Image loadImage(String name) {
 		String path = null;
 		Image image = null;
