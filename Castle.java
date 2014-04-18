@@ -6,8 +6,8 @@ public class Castle {
 
 	public Castle(Color color) {
 		this.color = color;
-		this.white = Castle.loadImage("rook_white");
-		this.black = Castle.loadImage("rook_black");
+		this.white = Piece.loadImage("rook_white");
+		this.black = Piece.loadImage("rook_black");
 
 	}
 
