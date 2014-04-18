@@ -6,8 +6,8 @@ public class Bishop extends Piece {
 
 	public Bishop(Color color) {
 		this.color = color;
-		this.white = Bishop.loadImage("bishop_white");
-		this.black = Bishop.loadImage("bishop_black");
+		this.white = Piece.loadImage("bishop_white");
+		this.black = Piece.loadImage("bishop_black");
 
 	}
 
