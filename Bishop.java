@@ -18,6 +18,6 @@ public class Bishop extends Piece {
 		else {
 			g.drawImage(white, r.x, r.y, r.width, r.height, null);
 		}
-	}	
+	}
 
 }
