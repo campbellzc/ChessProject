@@ -8,12 +8,11 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 
 public class Piece {
+
 	private Image image;
-	public void act() {
-		if (getBoard() == null)
-			return;
-		
-	}
+
+
+	public ArrayList<Location> validMoveLocations() {
 
 	public void Act() {
 
@@ -21,10 +20,11 @@ public class Piece {
 
 
 	public void move() {
+
 		
 	}
 
-	public ArrayList<Actor> processActors() {
+	public void move() {
 		
 	}
 
