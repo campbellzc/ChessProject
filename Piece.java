@@ -11,13 +11,29 @@ public class Piece {
 
 	private Image image;
 
+
 	public ArrayList<Location> validMoveLocations() {
+
+	public void Act() {
+
+	}
+
+
+	public void move() {
+
 		
 	}
 
 	public void move() {
 		
 	}
+
+
+
+
+	// private Image image;
+
+
 
 	private static Image loadImage(String name) {
 		String path = null;
