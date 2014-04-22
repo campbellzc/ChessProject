@@ -3,7 +3,7 @@ public class Queen extends Piece{
 	private Color color;
 	private Image white;
 	private Image black;
-	public Pawn(Color color) {
+	public Queen(Color color) {
 		steps = 0;
 		this.color = color;
 		this.white = Piece.loadImage("queen_white");
@@ -16,6 +16,9 @@ public class Queen extends Piece{
 		else {
 			g.drawImage(white, r.x, r.y, r.width, r.height, null);
 		}
+	}
+	public void getMoveLocations() {
+		
 	}
 
 	
