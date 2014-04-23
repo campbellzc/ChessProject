@@ -12,7 +12,9 @@ public class Piece {
 	private Image image;
 
 
-	public ArrayList<Location> validMoveLocations() {
+	// public ArrayList<Location> validMoveLocations() {
+
+	// }
 
 	public void Act() {
 
@@ -24,9 +26,6 @@ public class Piece {
 		
 	}
 
-	public void move() {
-		
-	}
 
 
 
@@ -35,7 +34,7 @@ public class Piece {
 
 
 
-	private static Image loadImage(String name) {
+	public static Image loadImage(String name) {
 		String path = null;
 		Image image = null;
 
