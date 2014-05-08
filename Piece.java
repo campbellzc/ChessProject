@@ -10,32 +10,20 @@ import javax.imageio.ImageIO;
 public class Piece {
 
 	private Image image;
+	private String color;
+	private String type;
+	private int x;
+	private int y;
 
-
-	public ArrayList<Location> validMoveLocations() {
-
-	public void Act() {
-
+	public Piece(String color, String type, int x, int y) {
+		this.x = x;
+		this.y = y;
+		this.color = color;
+		this.type = type;
+		this.image = Piece.loadImage(type + "_" + color);
 	}
 
-
-	public void move() {
-
-		
-	}
-
-	public void move() {
-		
-	}
-
-
-
-
-	// private Image image;
-
-
-
-	private static Image loadImage(String name) {
+	public static Image loadImage(String name) {
 		String path = null;
 		Image image = null;
 
@@ -49,6 +37,26 @@ public class Piece {
 
 		return image;
 	}
+
+	public void Act() {
+
+	}
+
+
+	public void move() {
+
+		
+	}
+
+
+
+
+
+	// private Image image;
+
+
+
+	
 
 
 }

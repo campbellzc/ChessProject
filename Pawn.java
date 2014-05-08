@@ -9,15 +9,10 @@ public class Pawn extends Piece{
 		this.white = Piece.loadImage("pawn_white");
 		this.black = Piece.loadImage("pawn_black");
 	}
-	public void draw(Graphics g, Rectangel r) {
-		if(this.color == BLACK) {
-			g.drawImage(black, r.x, r.y, r.width, r.height, null);
-		}
-		else {
-			g.drawImage(white, r.x, r.y, r.width, r.height, null);
-		}
-	}
-
+	
+    public void getMoveLocations() {
+    	
+    }
 	
 
 }
