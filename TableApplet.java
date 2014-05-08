@@ -47,6 +47,12 @@ public class TableApplet extends Applet implements ActionListener{
 				btn.addActionListener(this);
 				this.add(btn);
 
+				if (i == 1) {
+					btn.setIcon(new ImageIcon(Piece.loadImage("pawn_white")));
+				} else if (i == 6) {
+					btn.setIcon(new ImageIcon(Piece.loadImage("pawn_black")));
+				}
+
 			}
 
 		}
