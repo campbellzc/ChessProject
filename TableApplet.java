@@ -15,7 +15,7 @@ public class TableApplet extends Applet implements ActionListener{
 	private JButton btn;
 
 	public void init() {
-		
+
 		setLayout(new GridLayout(8,8));
 		JButton[][] board = new JButton[8][8];
 
@@ -56,7 +56,7 @@ public class TableApplet extends Applet implements ActionListener{
 	public void paint(Graphics g) {
 		super.paint(g);
 	}
-	
+
 	public void actionPerformed(ActionEvent e) {
 
 	}
