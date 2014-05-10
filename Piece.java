@@ -50,6 +50,10 @@ public class Piece {
 
 
 	}
+	public JButton[][] getMoveLocations() {
+		return new JButton[8][8];
+		
+	}
 	public int x() {
 			return this.x;
 	}
