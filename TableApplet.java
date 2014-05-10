@@ -52,7 +52,31 @@ public class TableApplet extends Applet implements ActionListener{
 				} else if (i == 6) {
 					btn.setIcon(new ImageIcon(Piece.loadImage("pawn_black")));
 				}
-
+				if (i == 0 && (j == 0 || j == 7)) {
+					btn.setIcon(new ImageIcon(Piece.loadImage("rook_white")));
+				} else if (i == 7 && (j == 0 || j == 7)) {
+					btn.setIcon(new ImageIcon(Piece.loadImage("rook_black")));
+				}
+				if (i == 0 && (j == 1 || j == 6)) {
+					btn.setIcon(new ImageIcon(Piece.loadImage("knight_white")));
+				} else if (i == 7 && (j == 1 || j == 6)) {
+					btn.setIcon(new ImageIcon(Piece.loadImage("knight_black")));
+				}
+				if (i == 0 && (j == 2 || j == 5)) {
+					btn.setIcon(new ImageIcon(Piece.loadImage("bishop_white")));
+				} else if (i == 7 && (j == 2 || j == 5)) {
+					btn.setIcon(new ImageIcon(Piece.loadImage("bishop_black")));
+				}
+				if (i == 0 && j == 3) {
+					btn.setIcon(new ImageIcon(Piece.loadImage("queen_white")));
+				} else if (i == 7 && j == 3) {
+					btn.setIcon(new ImageIcon(Piece.loadImage("queen_black")));
+				}
+				if (i == 0 && j == 4) {
+					btn.setIcon(new ImageIcon(Piece.loadImage("king_white")));
+				} else if (i == 7 && j == 4) {
+					btn.setIcon(new ImageIcon(Piece.loadImage("king_black")));
+				}
 			}
 
 		}
