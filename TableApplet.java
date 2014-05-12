@@ -49,33 +49,45 @@ public class TableApplet extends Applet implements ActionListener{
 
 				if (i == 1) {
 					btn.setIcon(new ImageIcon(Piece.loadImage("pawn_white")));
+					Piece pawnW = new Piece("white", "pawn", j, i);
 				} else if (i == 6) {
 					btn.setIcon(new ImageIcon(Piece.loadImage("pawn_black")));
+					Piece pawnB = new Piece("black", "pawn", j, i);
 				}
 				if (i == 0 && (j == 0 || j == 7)) {
 					btn.setIcon(new ImageIcon(Piece.loadImage("rook_white")));
+					Piece rookW = new Piece("white", "rook", j, i);
 				} else if (i == 7 && (j == 0 || j == 7)) {
 					btn.setIcon(new ImageIcon(Piece.loadImage("rook_black")));
+					Piece rookB = new Piece("black", "rook", j, i);
 				}
 				if (i == 0 && (j == 1 || j == 6)) {
 					btn.setIcon(new ImageIcon(Piece.loadImage("knight_white")));
+					Piece knightW = new Piece("white", "knight", j, i);
 				} else if (i == 7 && (j == 1 || j == 6)) {
 					btn.setIcon(new ImageIcon(Piece.loadImage("knight_black")));
+					Piece knightB = new Piece("black", "knight", j, i);
 				}
 				if (i == 0 && (j == 2 || j == 5)) {
 					btn.setIcon(new ImageIcon(Piece.loadImage("bishop_white")));
+					Piece bishopW = new Piece("white", "bishop", j, i);
 				} else if (i == 7 && (j == 2 || j == 5)) {
 					btn.setIcon(new ImageIcon(Piece.loadImage("bishop_black")));
+					Piece bishopB = new Piece("black", "bishop", j, i);
 				}
 				if (i == 0 && j == 3) {
 					btn.setIcon(new ImageIcon(Piece.loadImage("queen_white")));
+					Piece queenW = new Piece("white", "queen", j, i);
 				} else if (i == 7 && j == 3) {
 					btn.setIcon(new ImageIcon(Piece.loadImage("queen_black")));
+					Piece queenB = new Piece("black", "queen", j, i);
 				}
 				if (i == 0 && j == 4) {
 					btn.setIcon(new ImageIcon(Piece.loadImage("king_white")));
+					Piece kingW = new Piece("white", "king", j, i);
 				} else if (i == 7 && j == 4) {
 					btn.setIcon(new ImageIcon(Piece.loadImage("king_black")));
+					Piece kingB = new Piece("black", "king", j, i);
 				}
 			}
 
