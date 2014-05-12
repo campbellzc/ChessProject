@@ -54,7 +54,7 @@ public class Piece {
 
 	}
 	public String toString() {
-		return pieceName;
+		return this.type;
 	}
 	public JButton[][] getMoveLocations() {
 		return new JButton[8][8];
