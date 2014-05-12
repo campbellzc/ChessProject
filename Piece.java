@@ -20,9 +20,10 @@ public class Piece {
 	public Piece(String color, String type, int x, int y) {
 		this.x = x;
 		this.y = y;
-		this.color = color;
-		this.type = type;
+		this.color = color.toLowerCase();
+		this.type = type.toLowerCase();
 		this.image = Piece.loadImage(type + "_" + color);
+		
 	}
 	 
 	public static Image loadImage(String name) {
