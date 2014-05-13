@@ -32,7 +32,7 @@ public class Piece {
 		try {
 			path = "pictures" + File.separator + name + ".png";
 			image = ImageIO.read(new File(path));
-			scaled = image.getScaledInstance(150, 150, Image.SCALE_SMOOTH);
+			scaled = image.getScaledInstance(125, 125, Image.SCALE_SMOOTH);
 		} catch(IOException e) {
 			System.out.println("Could not load image at path: " + path);
 			System.exit(1);

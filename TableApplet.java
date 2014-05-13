@@ -18,11 +18,19 @@ public class TableApplet extends Applet implements ActionListener{
 
 		setLayout(new GridLayout(8,8));
 		JButton[][] board = new JButton[8][8];
+		String title = "";
 
 		for (int i=0; i<8; i++) {
 
 			for (int j=0; j<8; j++) {
-				btn = new JButton();
+
+				if (i <= 1) {
+					title = "Piece";
+				} else if (i >= 6) {
+					title = "Piece";
+				}
+
+				btn = new JButton(title);
 				btn.setPreferredSize(new Dimension(40, 40));
 				board[i][j] = btn;
 
@@ -46,6 +54,7 @@ public class TableApplet extends Applet implements ActionListener{
 				btn.setOpaque(true);
 				btn.addActionListener(this);
 				this.add(btn);
+				title = "";
 
 				if (i == 1) {
 					btn.setIcon(new ImageIcon(Piece.loadImage("pawn_white")));
@@ -63,33 +72,21 @@ public class TableApplet extends Applet implements ActionListener{
 		super.paint(g);
 	}
 
-	public void actionPerformed(ActionEvent e) {
+	public void actionPerformed(ActionEvent ae) {
+
+		if ("Piece".equals(ae.getActionCommand())) {
+			System.out.println("test");
+			repaint();
+		}
 
 	}
 
-	// String path = null;
-	// Image image = null;
-
-	// if (i<2) {
-	// 	try {
-	// 	    path = "pictures" + File.separator + "pawn_black.png";
-	// 	    File file = new File(path);
-	// 	    Image img = ImageIO.read(new File(path));
-	// 	    btn.setIcon(new ImageIcon(img));
-	// 	  } catch (IOException ex) {
-	// 	  	System.out.println("Could not load image at path: " + path);
-	// 	  	System.exit(1);
-	// 	  }
-	// } else if (i>5) {
-	// 	try {
-	// 	    path = "pictures" + File.separator + "pawn_white.png";
-	// 	    File file = new File(path);
-	// 	    Image img = ImageIO.read(new File(path));
-	// 	    btn.setIcon(new ImageIcon(img));
-	// 	  } catch (IOException ex) {
-	// 	  	System.out.println("Could not load image at path: " + path);
-	// 	  	System.exit(1);
-	// 	  }
-	// }
+	public boolean hasPiece(JButton btn) {
+		if (btn.getIcon() != null) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 	
 }
