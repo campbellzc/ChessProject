@@ -14,14 +14,16 @@ public class Piece {
 	private String type;
 	public int x;
 	public int y;
+	public String pieceName;
 	// private Color colorA;
 
 	public Piece(String color, String type, int x, int y) {
 		this.x = x;
 		this.y = y;
-		this.color = color;
-		this.type = type;
+		this.color = color.toLowerCase();
+		this.type = type.toLowerCase();
 		this.image = Piece.loadImage(type + "_" + color);
+		
 	}
 	 
 	public static Image loadImage(String name) {
@@ -39,6 +41,7 @@ public class Piece {
 		}
 
 		return scaled;
+		pieceName = "" + name.substring(name.length()-6, name.length());
 	}
 
 	public void Act() {
@@ -49,6 +52,13 @@ public class Piece {
 	public void move() {
 
 
+	}
+	public String toString() {
+		return this.type;
+	}
+	public JButton[][] getMoveLocations() {
+		return new JButton[8][8];
+		
 	}
 	public int x() {
 			return this.x;
