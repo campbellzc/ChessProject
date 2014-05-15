@@ -1,7 +1,7 @@
-public class Castle {
+public class Castle extends Piece{
 
-	public Castle() {
-
+	public Castle(String color, String type, int x, int y) {
+		super(color, type, x, y);
 	}
 
 }

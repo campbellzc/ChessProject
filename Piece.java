@@ -1,4 +1,4 @@
- import java.awt.Graphics;
+import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.Rectangle;
 
@@ -15,7 +15,6 @@ public class Piece {
 	public int x;
 	public int y;
 	public String pieceName;
-	// private Color colorA;
 
 	public Piece(String color, String type, int x, int y) {
 		this.x = x;
@@ -25,7 +24,7 @@ public class Piece {
 		this.image = Piece.loadImage(type + "_" + color);
 		
 	}
-	 
+	
 	public static Image loadImage(String name) {
 		String path = null;
 		Image image = null;
@@ -41,7 +40,6 @@ public class Piece {
 		}
 
 		return scaled;
-		pieceName = "" + name.substring(name.length()-6, name.length());
 	}
 
 	public void Act() {
@@ -56,10 +54,10 @@ public class Piece {
 	public String toString() {
 		return this.type;
 	}
-	public JButton[][] getMoveLocations() {
-		return new JButton[8][8];
+	// public JButton[][] getMoveLocations() {
+	// 	return new JButton[8][8];
 		
-	}
+	// }
 	public int x() {
 			return this.x;
 	}

@@ -1,10 +1,10 @@
 public class SpecialMoves {
-	public boolean Passant() {
+	// public boolean Passant() {
 		
-	}
-	public boolean Castling() {
+	// }
+	// public boolean Castling() {
 
 
-	}
+	// }
 
 }

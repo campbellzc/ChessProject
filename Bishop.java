@@ -1,10 +1,6 @@
 public class Bishop extends Piece {
-	private Color color
-	public Bishop(Color colo, int x, int y) {
-		this.color = colo;
-		this.x = x;
-		this.y = y;
-		this.icon = new ImageIcon(Peice.loadImage("Bishop", color));
+	public Bishop(String color, String type, int x, int y) {
+		super(color, type, x, y);
 	}
 
 }
