@@ -32,78 +32,78 @@ public class TableApplet extends Applet implements ActionListener{
 
 				if (i == 1) {
 
-				 	Pawn pawnB = new Pawn("black", "pawn", j, i);
+				 	Pawn pawnB = new Pawn("black", "pawn", j, i, board);
 				 	pawnB.setIcon(new ImageIcon(Piece.loadImage("pawn_black")));
 				 	piece = pawnB;
 					
 				} else if (i == 6) {
 
-				 	Pawn pawnW = new Pawn("white", "pawn", j, i);
+				 	Pawn pawnW = new Pawn("white", "pawn", j, i, board);
 				 	pawnW.setIcon(new ImageIcon(Piece.loadImage("pawn_white")));
 				 	piece = pawnW;
 					
 				}
 				if (i == 0 && (j == 0 || j == 7)) {
 
-					Castle rookB = new Castle("black", "rook", j, i);
+					Castle rookB = new Castle("black", "rook", j, i, board);
 					rookB.setIcon(new ImageIcon(Piece.loadImage("rook_black")));
 					piece = rookB;
 					
 				} else if (i == 7 && (j == 0 || j == 7)) {
 
-					Castle rookW = new Castle("white", "rook", j, i);
+					Castle rookW = new Castle("white", "rook", j, i, board);
 					rookW.setIcon(new ImageIcon(Piece.loadImage("rook_white")));
 					piece = rookW;
 					
 				}
 				if (i == 0 && (j == 1 || j == 6)) {
 
-					Knight knightB = new Knight("black", "knight", j, i);
+					Knight knightB = new Knight("black", "knight", j, i, board);
 					knightB.setIcon(new ImageIcon(Piece.loadImage("knight_black")));
 					piece = knightB;
 					
 				} else if (i == 7 && (j == 1 || j == 6)) {
 
-					Knight knightW = new Knight("white", "knight", j, i);
+					Knight knightW = new Knight("white", "knight", j, i, board);
 					knightW.setIcon(new ImageIcon(Piece.loadImage("knight_white")));
 					piece = knightW;
 					
 				}
 				if (i == 0 && (j == 2 || j == 5)) {
 
-					Bishop bishopB = new Bishop("black", "bishop", j, i);
+					Bishop bishopB = new Bishop("black", "bishop", j, i, board);
 					bishopB.setIcon(new ImageIcon(Piece.loadImage("bishop_black")));
 					piece = bishopB;
 					
 				} else if (i == 7 && (j == 2 || j == 5)) {
 
-					Bishop bishopW = new Bishop("white", "bishop", j, i);
+					Bishop bishopW = new Bishop("white", "bishop", j, i, board);
 					bishopW.setIcon(new ImageIcon(Piece.loadImage("bishop_white")));
 					piece = bishopW;
 					
 				}
 				if (i == 0 && j == 3) {
 
-					Queen queenB = new Queen("black", "queen", j, i);
+					Queen queenB = new Queen("black", "queen", j, i, board);
 					queenB.setIcon(new ImageIcon(Piece.loadImage("queen_black")));
 					piece = queenB;
 					
 				} else if (i == 7 && j == 3) {
 
-					Queen queenW = new Queen("white", "queen", j, i);
+					Queen queenW = new Queen("white", "queen", j, i, board);
 					queenW.setIcon(new ImageIcon(Piece.loadImage("queen_white")));
 					piece = queenW;
 					
 				}
 				if (i == 0 && j == 4) {
 
-					King kingB = new King("black", "king", j, i);
+					King kingB = new King("black", "king", j, i, board);
 					kingB.setIcon(new ImageIcon(Piece.loadImage("king_black")));
 					piece = kingB;
 					
 				} else if (i == 7 && j == 4) {
 
-					King kingW = new King("white", "king", j, i);
+					King kingW = new King("white", "king", j, i, board);
 					kingW.setIcon(new ImageIcon(Piece.loadImage("king_white")));
 					piece = kingW;
 					
