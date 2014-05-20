@@ -4,10 +4,11 @@ import java.awt.Rectangle;
 
 import java.io.File;
 import java.io.IOException;
+import javax.swing.*;
 
 import javax.imageio.ImageIO;
 
-public class Piece {
+public class Piece extends JButton{
 
 	private Image image;
 	private String color;

@@ -4,6 +4,8 @@ import java.awt.Rectangle;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import javax.swing.*;
 
 import javax.imageio.ImageIO;
 
@@ -26,7 +28,7 @@ public class Bishop extends Piece {
 			height++;
 		}
 		for (int i=Math.min(this.x, this.y); i>0; i++) {
-			
+			//
 		}
 	}
 
