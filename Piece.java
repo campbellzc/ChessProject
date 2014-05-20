@@ -1,12 +1,13 @@
 import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.Rectangle;
-
+import javax.swing.*;
 import java.io.File;
 import java.io.IOException;
 import javax.swing.*;
 
 import javax.imageio.ImageIO;
+
 
 public class Piece extends JButton{
 
