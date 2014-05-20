@@ -14,6 +14,7 @@ public class TableApplet extends Applet implements ActionListener{
 
 	private JButton lastClicked;
 	private String pieceX;
+
 	public void init() {
 
 		setLayout(new GridLayout(8,8));
@@ -25,85 +26,131 @@ public class TableApplet extends Applet implements ActionListener{
 			for (int j=0; j<8; j++) {
 
 				JButton btn = new JButton(title);
-				btn.setPreferredSize(new Dimension(40, 40));
-				
+				Piece piece = null;
+
+				if (i == 1) {
+
+				 	Pawn pawnB = new Pawn("black", "pawn", j, i);
+				 	pawnB.setIcon(new ImageIcon(Piece.loadImage("pawn_black")));
+				 	piece = pawnB;
+					
+				} else if (i == 6) {
+
+				 	Pawn pawnW = new Pawn("white", "pawn", j, i);
+				 	pawnW.setIcon(new ImageIcon(Piece.loadImage("pawn_white")));
+				 	piece = pawnW;
+					
+				}
+				if (i == 0 && (j == 0 || j == 7)) {
+
+					Castle rookB = new Castle("black", "rook", j, i);
+					rookB.setIcon(new ImageIcon(Piece.loadImage("rook_black")));
+					piece = rookB;
+					
+				} else if (i == 7 && (j == 0 || j == 7)) {
+
+					Castle rookW = new Castle("white", "rook", j, i);
+					rookW.setIcon(new ImageIcon(Piece.loadImage("rook_white")));
+					piece = rookW;
+					
+				}
+				if (i == 0 && (j == 1 || j == 6)) {
+
+					Knight knightB = new Knight("black", "knight", j, i);
+					knightB.setIcon(new ImageIcon(Piece.loadImage("knight_black")));
+					piece = knightB;
+					
+				} else if (i == 7 && (j == 1 || j == 6)) {
+
+					Knight knightW = new Knight("white", "knight", j, i);
+					knightW.setIcon(new ImageIcon(Piece.loadImage("knight_white")));
+					piece = knightW;
+					
+				}
+				if (i == 0 && (j == 2 || j == 5)) {
+
+					Bishop bishopB = new Bishop("black", "bishop", j, i);
+					bishopB.setIcon(new ImageIcon(Piece.loadImage("bishop_black")));
+					piece = bishopB;
+					
+				} else if (i == 7 && (j == 2 || j == 5)) {
+
+					Bishop bishopW = new Bishop("white", "bishop", j, i);
+					bishopW.setIcon(new ImageIcon(Piece.loadImage("bishop_white")));
+					piece = bishopW;
+					
+				}
+				if (i == 0 && j == 3) {
+
+					Queen queenB = new Queen("black", "queen", j, i);
+					queenB.setIcon(new ImageIcon(Piece.loadImage("queen_black")));
+					piece = queenB;
+					
+				} else if (i == 7 && j == 3) {
+
+					Queen queenW = new Queen("white", "queen", j, i);
+					queenW.setIcon(new ImageIcon(Piece.loadImage("queen_white")));
+					piece = queenW;
+					
+				}
+				if (i == 0 && j == 4) {
+
+					King kingB = new King("black", "king", j, i);
+					kingB.setIcon(new ImageIcon(Piece.loadImage("king_black")));
+					piece = kingB;
+					
+				} else if (i == 7 && j == 4) {
+
+					King kingW = new King("white", "king", j, i);
+					kingW.setIcon(new ImageIcon(Piece.loadImage("king_white")));
+					piece = kingW;
+					
+				}
+
+				if (piece == null) {
+					if (i%2 == 0) {
+						if (j%2 == 0) {
+							btn.setBackground(new Color(235,199,158));
+						} else {
+							// dark color
+							btn.setBackground(new Color(92,51,23));
+						}
+					} else {
+						if (j%2 == 0) {
+							// dark color
+							btn.setBackground(new Color(92,51,23));
+						} else {
+							btn.setBackground(new Color(235,199,158));
+						}
+					}
+					btn.setBorderPainted(false);
+					btn.setOpaque(true);
+					btn.addActionListener(this);
+					board[i][j] = btn;
+					this.add(btn);
+					continue;
+				}
 
 				if (i%2 == 0) {
 					if (j%2 == 0) {
-						btn.setBackground(new Color(235,199,158));
+						piece.setBackground(new Color(235,199,158));
 					} else {
 						// dark color
-						btn.setBackground(new Color(92,51,23));
+						piece.setBackground(new Color(92,51,23));
 					}
 				} else {
 					if (j%2 == 0) {
 						// dark color
-						btn.setBackground(new Color(92,51,23));
+						piece.setBackground(new Color(92,51,23));
 					} else {
-						btn.setBackground(new Color(235,199,158));
+						piece.setBackground(new Color(235,199,158));
 					}
 				}
-
-				btn.setBorderPainted(false);
-				btn.setOpaque(true);
-				btn.addActionListener(this);
-
-				if (i == 1) {
-					btn.setIcon(new ImageIcon(Piece.loadImage("pawn_white")));
-				 	Pawn pawnW = new Pawn("white", "pawn", j, i);
-					// btn.setDescription("pawnW");
-				} else if (i == 6) {
-					btn.setIcon(new ImageIcon(Piece.loadImage("pawn_black")));
-				 	Pawn pawnB = new Pawn("black", "pawn", j, i);
-					// btn.setDescription("pawnB");
-				}
-				if (i == 0 && (j == 0 || j == 7)) {
-					btn.setIcon(new ImageIcon(Piece.loadImage("rook_white")));
-					Castle rookW = new Castle("white", "rook", j, i);
-					// btn.setDescription("rookW");
-				} else if (i == 7 && (j == 0 || j == 7)) {
-					btn.setIcon(new ImageIcon(Piece.loadImage("rook_black")));
-					Castle rookB = new Castle("black", "rook", j, i);
-					// btn.setDescription("rookB");
-				}
-				if (i == 0 && (j == 1 || j == 6)) {
-					btn.setIcon(new ImageIcon(Piece.loadImage("knight_white")));
-					Knight knightW = new Knight("white", "knight", j, i);
-					// btn.setDescription("knightW");
-				} else if (i == 7 && (j == 1 || j == 6)) {
-					btn.setIcon(new ImageIcon(Piece.loadImage("knight_black")));
-					Knight knightB = new Knight("black", "knight", j, i);
-					// btn.setDescription("knightB");
-				}
-				if (i == 0 && (j == 2 || j == 5)) {
-					btn.setIcon(new ImageIcon(Piece.loadImage("bishop_white")));
-					Bishop bishopW = new Bishop("white", "bishop", j, i);
-					// btn.setDescription("bishopW");
-				} else if (i == 7 && (j == 2 || j == 5)) {
-					btn.setIcon(new ImageIcon(Piece.loadImage("bishop_black")));
-					Bishop bishopB = new Bishop("black", "bishop", j, i);
-					// btn.setDescription("bishopB");
-				}
-				if (i == 0 && j == 3) {
-					btn.setIcon(new ImageIcon(Piece.loadImage("queen_white")));
-					Queen queenW = new Queen("white", "queen", j, i);
-					// btn.setDescription("queenW");
-				} else if (i == 7 && j == 3) {
-					btn.setIcon(new ImageIcon(Piece.loadImage("queen_black")));
-					Queen queenB = new Queen("black", "queen", j, i);
-					// btn.setDescription("queenB");
-				}
-				if (i == 0 && j == 4) {
-					btn.setIcon(new ImageIcon(Piece.loadImage("king_white")));
-					King kingW = new King("white", "king", j, i);
-					// btn.setDescription("kingW");
-				} else if (i == 7 && j == 4) {
-					btn.setIcon(new ImageIcon(Piece.loadImage("king_black")));
-					King kingB = new King("black", "king", j, i);
-					// btn.setDescription("kingB");
-				}
-				board[i][j] = btn;
-				this.add(btn);
+				piece.setBorderPainted(false);
+				piece.setOpaque(true);
+				piece.addActionListener(this);
+				board[i][j] = piece;
+				this.add(piece);
 			}
 
 		}
@@ -115,9 +162,12 @@ public class TableApplet extends Applet implements ActionListener{
 	}
 
 	public void actionPerformed(ActionEvent ae) {
+		JButton currentlyClicked = (JButton)ae.getSource();
+		if (currentlyClicked instanceof Piece) {
+			Piece piece = (Piece)currentlyClicked;
+			System.out.println("ZACK STOP BEING SO STUPID");
+		}
 		lastClicked = (JButton)ae.getSource();
-		JButton temp = lastClicked;
-
 	}
 
 	public boolean hasPiece(JButton btn) {
