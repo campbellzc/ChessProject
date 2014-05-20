@@ -17,10 +17,12 @@ public class Piece extends JButton{
 	public int x;
 	public int y;
 	public String pieceName;
+	public JButton[][] board;
 
-	public Piece(String color, String type, int x, int y) {
+	public Piece(String color, String type, int x, int y, JButton[][] board) {
 		this.x = x;
 		this.y = y;
+		this.board = board;
 		this.color = color.toLowerCase();
 		this.type = type.toLowerCase();
 		this.image = Piece.loadImage(type + "_" + color);
