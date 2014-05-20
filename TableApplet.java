@@ -165,6 +165,7 @@ public class TableApplet extends Applet implements ActionListener{
 		JButton currentlyClicked = (JButton)ae.getSource();
 		if (currentlyClicked instanceof Piece) {
 			Piece piece = (Piece)currentlyClicked;
+			currentlyClicked = piece;
 		}
 		lastClicked = (JButton)ae.getSource();
 	}

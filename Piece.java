@@ -63,10 +63,10 @@ public class Piece extends JButton{
 		
 	// }
 	public int x() {
-			return this.x;
+		return this.x;
 	}
 
 	public int y() {
-			return this.y;
+		return this.y;
 	}
 }
