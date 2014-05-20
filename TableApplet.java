@@ -14,6 +14,7 @@ public class TableApplet extends Applet implements ActionListener{
 
 	private JButton lastClicked;
 	private String pieceX;
+	public JButton[][] board;
 	public void init() {
 
 		setLayout(new GridLayout(8,8));
